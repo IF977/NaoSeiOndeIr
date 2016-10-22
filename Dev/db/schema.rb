@@ -11,6 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021225014) do
+ActiveRecord::Schema.define(version: 20161022134755) do
+
+  create_table "buses", id: false, force: :cascade do |t|
+    t.integer "cod_linha"
+    t.string  "nome_linha"
+    t.string  "intinerario"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string  "nome"
+    t.string  "sobrenome"
+    t.string  "email"
+    t.text    "comentario"
+    t.decimal "nota",       precision: 1, scale: 1
+    t.binary  "foto"
+    t.date    "data"
+    t.integer "id_place"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string  "nome"
+    t.text    "descricao"
+    t.string  "logradouro"
+    t.string  "bairro"
+    t.string  "tipo",         limit: 2
+    t.string  "animacao",     limit: 2
+    t.string  "interacao",    limit: 2
+    t.integer "faixaEtaria",  limit: 2
+    t.float   "logitude"
+    t.float   "latitude"
+    t.binary  "imagem"
+    t.decimal "nota",                    precision: 1, scale: 1
+    t.integer "cod_linha"
+    t.decimal "preco",                   precision: 3, scale: 2
+    t.string  "telefone",     limit: 14
+    t.string  "site"
+    t.time    "horarioAbre"
+    t.time    "horarioFecha"
+  end
 
 end
