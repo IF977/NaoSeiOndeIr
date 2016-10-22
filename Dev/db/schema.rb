@@ -11,13 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016152112) do
-
-  create_table "museus", force: :cascade do |t|
-    t.integer  "_id"
-    t.string   "nome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20161021225014) do
 
 end
