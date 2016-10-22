@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  resources :form
   #get 'welcome' => 'pages#home'
   root 'pages#home'
   get 'form' => 'pages#form'
-  get 'sugest' => 'pages#sugest'
+  #get 'sugest' => 'pages#sugest'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
