@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  #get 'welcome' => 'pages#home'
-  get 'form' => 'pages#form'
+  get 'welcome' => 'pages#home'
+  get 'form' => 'form#form'
   get 'sugest' => 'pages#sugest'
   end
   #get 'sugest' => 'pages#sugest'

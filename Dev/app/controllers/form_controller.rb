@@ -1,5 +1,8 @@
 class FormController < ApplicationController
 
+	def form
+	end
+
 	def new
 	@form = Form.new
 	end	
