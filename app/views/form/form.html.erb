@@ -12,15 +12,15 @@
 					<%= form_tag("sugestao", method: "get") do %>
 
 						<p>Qual sua preferencia quanto ao espirito do local?</p>
-						<%= radio_button_tag(:espirito_local, "Agitado") %>
+						<%= radio_button_tag(:espirito_local, "A") %>
 						<%= label_tag("Agitado") %><br>
-						<%= radio_button_tag(:espirito_local, "Calmo") %>
+						<%= radio_button_tag(:espirito_local, "C") %>
 						<%= label_tag("Calmo") %><br>
 						
 						<p>Qual sua preferencia quanto a sua experiência?</p>
-						<%= radio_button_tag(:experiencia, "Interativo") %>
+						<%= radio_button_tag(:experiencia, "I") %>
 						<%= label_tag("Interativo") %><br>
-						<%= radio_button_tag(:experiencia, "Expositivo") %>
+						<%= radio_button_tag(:experiencia, "E") %>
 						<%= label_tag("Expositivo") %><br>
 						<br>
 						Distância Máx:<br>

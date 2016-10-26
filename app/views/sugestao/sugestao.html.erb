@@ -1,5 +1,17 @@
 <div class="main">
 	<div class "container">
 		<h1>Sugestões</h1>
+		<table>
+		  <tr>
+		    <th>Nome</th>
+		    <th>Descricao</th>
+		  </tr>
+		<% @locais.each do |l| %>
+		  <tr>
+		    <td><%= l.nome          %></td>
+		    <td><%= l.descricao      %></td>
+		  </tr>
+		<% end %>
+		</table>
 	</div>
 </div>
