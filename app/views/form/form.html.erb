@@ -9,32 +9,35 @@
 					<h1><b>Formulário</b></h1>
 					<p>Preencha o formulário para achar um lugar!</p>
 						
-					<form action="sugestao" method="get">
+					<%= form_tag("sugestao", method: "get") do %>
 
 						<p>Qual sua preferencia quanto ao espirito do local?</p>
-						<input type="radio" name="local1" value="A">Agitado<br>
-						<input type="radio" name="local1" value="C">Calmo<br>
-
+						<%= radio_button_tag(:espirito_local, "Agitado") %>
+						<%= label_tag("Agitado") %><br>
+						<%= radio_button_tag(:espirito_local, "Calmo") %>
+						<%= label_tag("Calmo") %><br>
+						
 						<p>Qual sua preferencia quanto a sua experiência?</p>
-						<input type="radio" name="local2" value="I">Interativo<br>
-						<input type="radio" name="local2" value="E">Expositivo<br>
-
+						<%= radio_button_tag(:experiencia, "Interativo") %>
+						<%= label_tag("Interativo") %><br>
+						<%= radio_button_tag(:experiencia, "Expositivo") %>
+						<%= label_tag("Expositivo") %><br>
+						<br>
 						Distância Máx:<br>
-						<input type="int" name="firstname" value ="0">
-						<br>
+						<%= number_field(:distancia_max,:dm)%>
+						<%= label_tag(" Km")%><br>
 						Preço desejado:<br>
-						<input type="int" name="firstname" value ="0">
-						<br>
+						<%= number_field(:preco_desejado, :pd)%>
+						<%= label_tag(" R$")%><br><br>
 						Horário desejado:
 						Das:<br>
-						<input type="text" name="firstname" value ="0">
+						<%= text_area_tag(:hora_inicial)%>
 						As:
-						<input type="text" name="lastname">
-						<br>
-                                                <input type="submit" value="Submit">
-					</form>
+						<%= text_area_tag(:hora_final)%><br><br>
+						<%= submit_tag("Submit") %><br>
+					<%end%>
 					<form action="welcome" method="get">
-						<input id="back" type="submit" value="Voltar">
+						<br><input id="back" type="submit" value="Voltar">
 					</form>
 						
 				</div>
