@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022134755) do
+ActiveRecord::Schema.define(version: 20161030165246) do
 
   create_table "buses", id: false, force: :cascade do |t|
     t.integer "cod_linha"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161022134755) do
     t.integer "faixaEtaria",  limit: 2
     t.float   "logitude"
     t.float   "latitude"
-    t.binary  "imagem"
+    t.string  "imagem"
     t.decimal "nota",                    precision: 1, scale: 1
     t.integer "cod_linha"
     t.decimal "preco",                   precision: 3, scale: 2

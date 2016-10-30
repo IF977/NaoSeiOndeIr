@@ -2265,3 +2265,61 @@ Started GET "/assets/pages.self-502c71796d96d3f3e9b7cdccdfa3cc5049e50aa7283ef14a
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("nome", "descricao", "logradouro", "bairro", "tipo", "animacao", "interacao", "faixaEtaria", "logitude", "latitude", "nota", "telefone", "site", "horarioAbre", "horarioFecha") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["nome", "Museu Murilo La Greca"], ["descricao", "no Parnamirim, os amantes da arte contemporânea conhecerão o acervo de 1,4 mil desenhos de Murilo La Greca em técnicas diversas. No local, também são guardadas 160 pinturas e cartas trocadas pelo artista com Portinari e Giacometti."], ["logradouro", "R. Leonardo Bezerra Cavalcante, 366"], ["bairro", "Parnamirim"], ["tipo", "M"], ["animacao", "C"], ["interacao", "E"], ["faixaEtaria", 0], ["logitude", -34.909832], ["latitude", -8.037325], ["nota", 0.0], ["telefone", "(81)3355-3126"], ["site", "http://museumurillolagreca.com.br/"], ["horarioAbre", "2000-01-01 13:00:00.000000"], ["horarioFecha", "2000-01-01 17:00:00.000000"]]
   [1m[36m (97.2ms)[0m  [1mcommit transaction[0m
+                                                                                                                                                                                                                                            [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-28 17:42:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1917ms (Views: 1862.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-56951dde2c1851a410587708fbd8c04edd92f876c70b8fd83f73e59838437f50.css?body=1" for 127.0.0.1 at 2016-10-28 17:42:49 -0300
+
+
+Started GET "/assets/sugestao.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-28 17:42:49 -0300
+
+
+Started GET "/assets/sugestao.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-28 17:42:49 -0300
+
+
+Started GET "/form" for 127.0.0.1 at 2016-10-28 17:46:51 -0300
+Processing by FormController#form as HTML
+  Rendered form/form.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 170ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-28 17:48:01 -0300
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/form" for 127.0.0.1 at 2016-10-28 17:48:14 -0300
+Processing by FormController#form as HTML
+  Rendered form/form.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumn (20161030165246)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumn (20161030165246)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "aplaces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descricao" text, "logradouro" varchar, "bairro" varchar, "tipo" varchar(2), "animacao" varchar(2), "interacao" varchar(2), "faixaEtaria" integer(2), "logitude" float, "latitude" float, "imagem" blob, "nota" decimal(1,1), "cod_linha" integer, "preco" decimal(3,2), "telefone" varchar(14), "site" varchar, "horarioAbre" time, "horarioFecha" time) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "places"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aplaces" ("id","nome","descricao","logradouro","bairro","tipo","animacao","interacao","faixaEtaria","logitude","latitude","imagem","nota","cod_linha","preco","telefone","site","horarioAbre","horarioFecha") VALUES (1, 'Museu do Homem do Nordeste', 'são cerca de 15 mil peças no acervo retratando a formação do povo nordestino, considerado um dos mais importantes museus antropológicos brasileiros.', 'Av. Dezessete de Agosto, 2187', 'Casa Forte', 'M', 'C', 'E', 0, -34.925281, -8.030196, NULL, 0, NULL, NULL, '(81) 3073-6340', 'http://www.fundaj.gov.br/', '2000-01-01 08:30:00.000000', '2000-01-01 17:00:00.000000')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aplaces" ("id","nome","descricao","logradouro","bairro","tipo","animacao","interacao","faixaEtaria","logitude","latitude","imagem","nota","cod_linha","preco","telefone","site","horarioAbre","horarioFecha") VALUES (2, 'Museu Murilo La Greca', 'no Parnamirim, os amantes da arte contemporânea conhecerão o acervo de 1,4 mil desenhos de Murilo La Greca em técnicas diversas. No local, também são guardadas 160 pinturas e cartas trocadas pelo artista com Portinari e Giacometti.', 'R. Leonardo Bezerra Cavalcante, 366', 'Parnamirim', 'M', 'C', 'E', 0, -34.909832, -8.037325, NULL, 0, NULL, NULL, '(81)3355-3126', 'http://museumurillolagreca.com.br/', '2000-01-01 13:00:00.000000', '2000-01-01 17:00:00.000000')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "places"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descricao" text, "logradouro" varchar, "bairro" varchar, "tipo" varchar(2), "animacao" varchar(2), "interacao" varchar(2), "faixaEtaria" integer(2), "logitude" float, "latitude" float, "imagem" varchar, "nota" decimal(1,1), "cod_linha" integer, "preco" decimal(3,2), "telefone" varchar(14), "site" varchar, "horarioAbre" time, "horarioFecha" time) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aplaces"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "places" ("id","nome","descricao","logradouro","bairro","tipo","animacao","interacao","faixaEtaria","logitude","latitude","imagem","nota","cod_linha","preco","telefone","site","horarioAbre","horarioFecha") VALUES (1, 'Museu do Homem do Nordeste', 'são cerca de 15 mil peças no acervo retratando a formação do povo nordestino, considerado um dos mais importantes museus antropológicos brasileiros.', 'Av. Dezessete de Agosto, 2187', 'Casa Forte', 'M', 'C', 'E', 0, -34.925281, -8.030196, NULL, 0, NULL, NULL, '(81) 3073-6340', 'http://www.fundaj.gov.br/', '2000-01-01 08:30:00.000000', '2000-01-01 17:00:00.000000')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "places" ("id","nome","descricao","logradouro","bairro","tipo","animacao","interacao","faixaEtaria","logitude","latitude","imagem","nota","cod_linha","preco","telefone","site","horarioAbre","horarioFecha") VALUES (2, 'Museu Murilo La Greca', 'no Parnamirim, os amantes da arte contemporânea conhecerão o acervo de 1,4 mil desenhos de Murilo La Greca em técnicas diversas. No local, também são guardadas 160 pinturas e cartas trocadas pelo artista com Portinari e Giacometti.', 'R. Leonardo Bezerra Cavalcante, 366', 'Parnamirim', 'M', 'C', 'E', 0, -34.909832, -8.037325, NULL, 0, NULL, NULL, '(81)3355-3126', 'http://museumurillolagreca.com.br/', '2000-01-01 13:00:00.000000', '2000-01-01 17:00:00.000000')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aplaces"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161030165246"]]
+  [1m[35m (18.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
