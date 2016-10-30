@@ -11,7 +11,7 @@ class CreatePlaces < ActiveRecord::Migration
     	t.integer :faixaEtaria, :limit => 2
     	t.float :logitude
     	t.float :latitude
-    	t.binary :imagem
+    	t.string :imagem
     	t.decimal :nota, :precision => 1, :scale => 1
     	t.integer :cod_linha
     	t.decimal :preco, :precision => 3, :scale => 2
