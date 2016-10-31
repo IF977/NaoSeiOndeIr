@@ -9,7 +9,7 @@
 					<h1><b>Formulário</b></h1>
 					<p>Preencha o formulário para achar um lugar!</p>
 						
-					<%= form_tag("sugestao", method: "get") do %>
+					<%= form_tag("sugestao", method: "post") do %>
 
 						<p>Qual sua preferencia quanto ao espirito do local?</p>
 						<%= radio_button_tag(:espirito_local, "A") %>
@@ -34,7 +34,7 @@
 						<%= text_area_tag(:hora_inicial)%>
 						As:
 						<%= text_area_tag(:hora_final)%><br><br>
-						<%= submit_tag("Submit") %><br>
+						<%= submit_tag("Submit", id: 'submit') %><br>
 					<%end%>
 					<form action="welcome" method="get">
 						<br><input id="back" type="submit" value="Voltar">
