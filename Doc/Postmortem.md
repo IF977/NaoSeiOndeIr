@@ -4,27 +4,39 @@
 
 Início da Iteração | Término da iteração
 ------------ | -------------
-03/10/2016 | 17/10/2016
+19/10/2016 | 31/10/2016
 
 
 ### O que estava planejado
-* Organizar ambiente de desenvolvimento 
-* Estudar Ruby on Rails, Cucumber, Capybara, Horuko
-* Fazer telas iniciais 
-
-### O que foi feito
-* Entendimento parcial do Ruby on Rails 
-* Fazer telas iniciais 
-
-### O que não foi feito
-* Nem todos os integrantes conseguiram organizar o ambiente de desenvolvimento 
-* Não conseguimos entender nem utilizar Cucumber e Capybara
-
-### Planejado para próxima iteração
-* Tela de formulário
-* Tela de Sugestões
+* Criar o banco de dados 
+* Criar os models
+* Criar views 
+* Criar controllers
+* Direcionamento das rotas
+* População do banco de dados
+* Fazer o BDD
+* Fazer o TDD
 * Tela de Informações
 
+### O que foi feito
+* Fazer o BDD
+* Criação dos models
+* Criação do Banco de dados
+* Modelo Entidade Relacional
+* ¾ das views juntamente com seus controllers já prontas
+
+### O que não foi feito
+* TDD
+* População completa do banco de dados
+* Tela de Informações
+
+### Planejado para próxima iteração
+* A view e o controller da tela descritiva
+* Popular o Banco de Dados
+* Mais TDD e BDD
+
 ### Lições aprendidas
-* Como instalar Ruby on Rails no Ubuntu
-* Controler, View e Model
+* BDD
+* Código Rails
+* Código HTML
+* Mais informações sobre o modelo MVC
