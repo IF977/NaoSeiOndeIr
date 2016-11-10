@@ -1,47 +1,51 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Forms</title>
-	</head>
-		<body>
-			<div class="main">
-				<div class="container">
-					<h1><b>Formulário</b></h1>
-					<p>Preencha o formulário para achar um lugar!</p>
-						
-					<%= form_tag("sugestao", method: "post") do %>
+<div class="row">
+ <div class="col-md-6 col-md-offset-3 grid">
+  <h2 class="form">Para comerçamos precisamos que você preencha este formalário, ele nos ajudará a montar seu perfil para analizar-mos e assim encontrar o melhor lugar para você ir.</h2>
+<label>Clicando aqui você permite que nós localizemos você:</label>
+<br>
+<button class="btn btn-default" onclick="getLocation()">Localizar</button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
 
-						<p>Qual sua preferencia quanto ao espirito do local?</p>
-						<%= radio_button_tag(:espirito_local, "A") %>
-						<%= label_tag("Agitado") %><br>
-						<%= radio_button_tag(:espirito_local, "C") %>
-						<%= label_tag("Calmo") %><br>
-						
-						<p>Qual sua preferencia quanto a sua experiência?</p>
-						<%= radio_button_tag(:experiencia, "I") %>
-						<%= label_tag("Interativo") %><br>
-						<%= radio_button_tag(:experiencia, "E") %>
-						<%= label_tag("Expositivo") %><br>
-						<br>
-						Distância Máx:<br>
-						<%= number_field(:distancia_max,:dm)%>
-						<%= label_tag(" Km")%><br>
-						Preço desejado:<br>
-						<%= number_field(:preco_desejado, :pd)%>
-						<%= label_tag(" R$")%><br><br>
-						Horário desejado:
-						Das:<br>
-						<%= text_area_tag(:hora_inicial)%>
-						As:
-						<%= text_area_tag(:hora_final)%><br><br>
-						<%= submit_tag("Submit", id: 'submit') %><br>
-					<%end%>
-					<form action="welcome" method="get">
-						<br><input id="back" type="submit" value="Voltar">
-					</form>
-						
-				</div>
-			</div>
-		</body>
-</html>
+<%= bootstrap_form_tag url: sugestao_path do |f| %>
+  <%= f.text_field :nome, label: "Digite seu nome.." %>
+  
+  <%= f.number_field :idade, label: "Quantos anos você tem?" %>
+  
+  <%= f.form_group :flag1, label: { text: "Que tipo de lugar você quer ir?" } do %>
+  <br>
+    <%= f.radio_button :skill_level1,"A", label: "Agitado", inline: true %>
+    <%= f.radio_button :skill_level1, "C", label: "Calmo", inline: true %>
+  <% end %>
+  
+  <%= f.form_group :flag2, label: { text: "Você prefere um lugar.." } do %>
+    <br>
+    <%= f.radio_button :skill_level2,"In", label: "Interativo", inline: true %>
+    <%= f.radio_button :skill_level2, "Ex", label: "Expositivo", inline: true %>
+  <% end %>
 
+  <%= f.time_select :horario, label: "Qual horário você deseja sair?" %>
+  
+  <%= f.number_field :preco, prepend: "R$", append: ",00", label: "Qual o preço médio que você pode gastar?" %>
+  
+  <%= f.primary "Procurar Lugares", id: "submit" %>
+  
+<% end %>
+</div>
+</div>
+<br>
+<br>
+</div>
