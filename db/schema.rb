@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030165246) do
+ActiveRecord::Schema.define(version: 20161110222233) do
 
   create_table "buses", id: false, force: :cascade do |t|
     t.integer "cod_linha"
@@ -28,6 +28,27 @@ ActiveRecord::Schema.define(version: 20161030165246) do
     t.binary  "foto"
     t.date    "data"
     t.integer "id_place"
+  end
+
+  create_table "lugars", force: :cascade do |t|
+    t.string   "nome"
+    t.text     "descricao"
+    t.string   "logradouro"
+    t.string   "bairro"
+    t.string   "tipo"
+    t.string   "animacao"
+    t.string   "interacao"
+    t.integer  "faixaEtaria"
+    t.float    "logitude"
+    t.float    "latitude"
+    t.string   "imagem"
+    t.decimal  "nota"
+    t.integer  "cod_linha"
+    t.decimal  "preco"
+    t.string   "telefone"
+    t.string   "site"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "places", force: :cascade do |t|
