@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lugars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Logradouro</th>
+      <th>Bairro</th>
+      <th>Tipo</th>
+      <th>Animacao</th>
+      <th>Interacao</th>
+      <th>Faixaetaria</th>
+      <th>Logitude</th>
+      <th>Latitude</th>
+      <th>Imagem</th>
+      <th>Nota</th>
+      <th>Cod linha</th>
+      <th>Preco</th>
+      <th>Telefone</th>
+      <th>Site</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lugars.each do |lugar| %>
+      <tr>
+        <td><%= lugar.nome %></td>
+        <td><%= lugar.descricao %></td>
+        <td><%= lugar.logradouro %></td>
+        <td><%= lugar.bairro %></td>
+        <td><%= lugar.tipo %></td>
+        <td><%= lugar.animacao %></td>
+        <td><%= lugar.interacao %></td>
+        <td><%= lugar.faixaEtaria %></td>
+        <td><%= lugar.logitude %></td>
+        <td><%= lugar.latitude %></td>
+        <td><%= lugar.imagem %></td>
+        <td><%= lugar.nota %></td>
+        <td><%= lugar.cod_linha %></td>
+        <td><%= lugar.preco %></td>
+        <td><%= lugar.telefone %></td>
+        <td><%= lugar.site %></td>
+        <td><%= link_to 'Show', lugar %></td>
+        <td><%= link_to 'Edit', edit_lugar_path(lugar) %></td>
+        <td><%= link_to 'Destroy', lugar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lugar', new_lugar_path %>

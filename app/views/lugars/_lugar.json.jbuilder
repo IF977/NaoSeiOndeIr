@@ -1,0 +1,2 @@
+json.extract! lugar, :id, :nome, :descricao, :logradouro, :bairro, :tipo, :animacao, :interacao, :faixaEtaria, :logitude, :latitude, :imagem, :nota, :cod_linha, :preco, :telefone, :site, :created_at, :updated_at
+json.url lugar_url(lugar, format: :json)
