@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :lugars
   root 'home#home'
- #get 'lugar' => 'lugars#index'
   get 'form' => 'form#form'
   get 'welcome' => 'home#home'
   post 'sugestao' => 'sugestao#sugestao'
