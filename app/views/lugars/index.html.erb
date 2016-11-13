@@ -17,10 +17,12 @@
       <th>Latitude</th>
       <th>Imagem</th>
       <th>Nota</th>
-      <th>Cod linha</th>
+      <th>Cod_Linha</th>
       <th>Preco</th>
       <th>Telefone</th>
       <th>Site</th>
+      <th>Horario_Abre</th>
+      <th>Horario_Fecha</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -44,6 +46,8 @@
         <td><%= lugar.preco %></td>
         <td><%= lugar.telefone %></td>
         <td><%= lugar.site %></td>
+        <td><%= lugar.horario_abre %></td>
+        <td><%= lugar.horario_fecha %></td>
         <td><%= link_to 'Show', lugar %></td>
         <td><%= link_to 'Edit', edit_lugar_path(lugar) %></td>
         <td><%= link_to 'Destroy', lugar, method: :delete, data: { confirm: 'Are you sure?' } %></td>

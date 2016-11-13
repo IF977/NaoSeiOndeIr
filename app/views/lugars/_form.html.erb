@@ -20,12 +20,28 @@
     <%= f.text_area :descricao %>
   </div>
   <div class="field">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
     <%= f.label :logradouro %><br>
     <%= f.text_field :logradouro %>
   </div>
   <div class="field">
-    <%= f.label :bairro %><br>
-    <%= f.text_field :bairro %>
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :logitude %><br>
+    <%= f.text_field :logitude %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :site %><br>
+    <%= f.text_field :site %>
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
@@ -44,14 +60,6 @@
     <%= f.number_field :faixaEtaria %>
   </div>
   <div class="field">
-    <%= f.label :logitude %><br>
-    <%= f.text_field :logitude %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
     <%= f.label :imagem %><br>
     <%= f.text_field :imagem %>
   </div>
@@ -68,12 +76,12 @@
     <%= f.text_field :preco %>
   </div>
   <div class="field">
-    <%= f.label :telefone %><br>
-    <%= f.text_field :telefone %>
+    <%= f.label :horario_abre %><br>
+    <%= f.text_field :horario_abre %>
   </div>
   <div class="field">
-    <%= f.label :site %><br>
-    <%= f.text_field :site %>
+    <%= f.label :horario_fecha %><br>
+    <%= f.text_field :horario_fecha %>
   </div>
   <div class="actions">
     <%= f.submit %>

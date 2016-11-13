@@ -69,6 +69,6 @@ class LugarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lugar_params
-      params.require(:lugar).permit(:nome, :descricao, :logradouro, :bairro, :tipo, :animacao, :interacao, :faixaEtaria, :logitude, :latitude, :imagem, :nota, :cod_linha, :preco, :telefone, :site)
+      params.require(:lugar).permit(:nome, :descricao, :logradouro, :bairro, :tipo, :animacao, :interacao, :faixaEtaria, :logitude, :latitude, :imagem, :nota, :cod_linha, :preco, :telefone, :site, :horario_abre, :horario_fecha)
     end
 end
