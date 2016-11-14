@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :lugars
+  resources :locals
   root 'home#home'
   get 'form' => 'form#form'
   get 'welcome' => 'home#home'
