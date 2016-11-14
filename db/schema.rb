@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113194843) do
+ActiveRecord::Schema.define(version: 20161114171106) do
 
   create_table "buses", id: false, force: :cascade do |t|
     t.integer "cod_linha"
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20161113194843) do
     t.string   "site"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.datetime "horario_abre"
-    t.datetime "horario_fecha"
+    t.string   "horario_abre"
+    t.string   "horario_fecha"
   end
 
   create_table "places", force: :cascade do |t|
