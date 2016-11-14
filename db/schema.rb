@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114171106) do
+ActiveRecord::Schema.define(version: 20161114174402) do
 
   create_table "buses", id: false, force: :cascade do |t|
     t.integer "cod_linha"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20161114171106) do
     t.string   "animacao"
     t.string   "interacao"
     t.integer  "faixaEtaria"
-    t.float    "logitude"
+    t.float    "longitude"
     t.float    "latitude"
     t.string   "imagem"
     t.decimal  "nota"
