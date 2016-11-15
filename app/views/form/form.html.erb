@@ -22,6 +22,18 @@
 						<%= label_tag("Interativo") %><br>
 						<%= radio_button_tag(:experiencia, "E") %>
 						<%= label_tag("Expositivo") %><br>
+
+						<p>Qual tipo de lugar você prefere?</p>
+						<%= radio_button_tag(:tipo, "M") %>
+						<%= label_tag("Museu") %><br>
+						<%= radio_button_tag(:tipo, "T") %>
+						<%= label_tag("Teatro") %><br>
+						<%= radio_button_tag(:tipo, "S") %>
+						<%= label_tag("Shopping") %><br>
+						<%= radio_button_tag(:tipo, "MP") %>
+						<%= label_tag("Mercados Públicos") %><br>
+						
+
 						<br>
 						Distância Máx:<br>
 						<%= number_field(:distancia_max,:dm)%>

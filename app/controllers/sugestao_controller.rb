@@ -2,8 +2,10 @@ class SugestaoController < ApplicationController
 
     def sugestao
     	a = params[:espirito_local]
-    	b = params[:experiencia]	
-    	@locais = Lugar.where(["animacao = :el and interacao = :exp", {el: a, exp: b}])
+    	b = params[:experiencia]
+    	c = params[:hora_inicial]
+    	d = params[:tipo]
+    	@locais = Local.where(["animacao = :el and interacao = :exp and horario_abre = :h and tipo = :t", {el: a, exp: b, h: c, t: d}])
     end
 
 end
