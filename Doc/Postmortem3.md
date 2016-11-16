@@ -11,7 +11,7 @@ Início da Iteração | Término da iteração
 
 ### O que estava planejado
 * Interface para inserir os dados no banco
-* Popular o banco de dados  
+* Popular o banco de dados
 * Melhorar busca dos controllers
 * Fazer o TDD
 * Tela de desrição do lugar
@@ -26,6 +26,7 @@ Início da Iteração | Término da iteração
 
 ### O que não foi feito
 * Tela de descrição do lugar(Última tela)
+*Adaptação da tela de sugestões
 
 ### Planejado para próxima iteração
 * A view e o controller da tela descritiva
