@@ -22,7 +22,7 @@
 						<%= label_tag("Interativo") %><br>
 						<%= radio_button_tag(:experiencia, "E") %>
 						<%= label_tag("Expositivo") %><br>
-
+						
 						<p>Qual tipo de lugar você prefere?</p>
 						<%= radio_button_tag(:tipo, "M") %>
 						<%= label_tag("Museu") %><br>
@@ -32,7 +32,6 @@
 						<%= label_tag("Shopping") %><br>
 						<%= radio_button_tag(:tipo, "MP") %>
 						<%= label_tag("Mercados Públicos") %><br>
-						
 
 						<br>
 						Distância Máx:<br>
@@ -41,11 +40,8 @@
 						Preço desejado:<br>
 						<%= number_field(:preco_desejado, :pd)%>
 						<%= label_tag(" R$")%><br><br>
-						Horário desejado:
-						Das:<br>
-						<%= text_area_tag(:hora_inicial)%>
-						As:
-						<%= text_area_tag(:hora_final)%><br><br>
+						Horário desejado:<br>
+						<%= text_area_tag(:hora_inicial)%><br>
 						<%= submit_tag("Submit", id: 'submit') %><br>
 					<%end%>
 					<form action="welcome" method="get">
