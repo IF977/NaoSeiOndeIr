@@ -19,7 +19,7 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude; 
 }
 </script>
-
+<!--
 <%= bootstrap_form_tag url: sugestao_path do |f| %>
   <%= f.text_field :nome, label: "Digite seu nome.." %>
   
@@ -44,6 +44,45 @@ function showPosition(position) {
   <%= f.primary "Procurar Lugares", id: "submit" %>
   
 <% end %>
+-->
+          <h1><b>Formulário</b></h1>
+          <p>Preencha o formulário para achar um lugar!</p>
+            
+          <%= form_tag("sugestao", method: "post") do %>
+
+            <p>Qual sua preferencia quanto ao espirito do local?</p>
+            <%= radio_button_tag(:espirito_local, "A") %>
+            <%= label_tag("Agitado") %><br>
+            <%= radio_button_tag(:espirito_local, "C") %>
+            <%= label_tag("Calmo") %><br>
+            
+            <p>Qual sua preferencia quanto a sua experiência?</p>
+            <%= radio_button_tag(:experiencia, "I") %>
+            <%= label_tag("Interativo") %><br>
+            <%= radio_button_tag(:experiencia, "E") %>
+            <%= label_tag("Expositivo") %><br>
+            
+            <p>Qual tipo de lugar você prefere?</p>
+            <%= radio_button_tag(:tipo, "M") %>
+            <%= label_tag("Museu") %><br>
+            <%= radio_button_tag(:tipo, "T") %>
+            <%= label_tag("Teatro") %><br>
+            <%= radio_button_tag(:tipo, "S") %>
+            <%= label_tag("Shopping") %><br>
+            <%= radio_button_tag(:tipo, "MP") %>
+            <%= label_tag("Mercados Públicos") %><br>
+
+            <br>
+            Distância Máx:<br>
+            <%= number_field(:distancia_max,:dm)%>
+            <%= label_tag(" Km")%><br>
+            Preço desejado:<br>
+            <%= number_field(:preco_desejado, :pd)%>
+            <%= label_tag(" R$")%><br><br>
+            Horário desejado:<br>
+            <%= text_area_tag(:hora_inicial)%><br>
+            <%= submit_tag("Submit", id: 'submit') %><br>
+          <%end%>
 </div>
 </div>
 <br>
