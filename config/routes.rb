@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   root 'home#home'
   get 'form' => 'form#form'
   get 'welcome' => 'home#home'
+  get 'about' => 'about#about'
+  get 'help' => 'help#help'
+  get 'contact' => 'contact#contact'
   post 'sugestao' => 'sugestao#sugestao'
   get 'descricao' => 'descricao#descricao'
+
   end
   #get 'sugest' => 'pages#sugest'
   # The priority is based upon order of creation: first created -> highest priority.
