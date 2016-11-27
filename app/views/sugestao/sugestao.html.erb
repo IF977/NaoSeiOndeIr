@@ -1,20 +1,9 @@
 <div class="main">
 	<div class "container">
 		<h1>Sugestões</h1>
-		<table>
-		  <tr>
-		    <th>Local</th>
-		    <th>Nome</th>
-		    <th>Descricao</th>
-		  </tr>
 		<% @locais.each do |l| %>
-		  <tr>
-		    <td> <img src=<%=l.imagem%> width = "220"> </td>
-		    <td><%= l.nome          %></td>
-		    <td><%= l.descricao      %></td>
-		  </tr>
-		  <br><br>
+			<%= link_to image_tag(l.imagem), controller: 'descricao', action: 'descricao', :valor => l.nome  %>
+		  <br><br><br><br><br>
 		<% end %>
-		</table>
 	</div>
 </div>

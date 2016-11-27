@@ -1,0 +1,12 @@
+<div class="main">
+	<div class "container">
+		<h1>Sugestões</h1>
+		<% @desc.each do |l| %>
+			<%= image_tag(l.imagem) %><br>
+      <%= l.nome %><br><br><br>
+      <%= l.descricao %><br><br><br>
+      <%= l.bairro %><br><br><br>
+
+		<% end %>
+	</div>
+</div>

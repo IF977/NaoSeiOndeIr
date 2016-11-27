@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'form' => 'form#form'
   get 'welcome' => 'home#home'
   post 'sugestao' => 'sugestao#sugestao'
+  get 'descricao' => 'descricao#descricao'
   end
   #get 'sugest' => 'pages#sugest'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -60,4 +61,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
