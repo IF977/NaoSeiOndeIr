@@ -24,8 +24,11 @@ module Dev
     config.active_record.raise_in_transactional_callbacks = true
     #Rspec Configuration
     config.generators do |g|
-      g.test_framwork :rspec
-    
-    end     
+        g.test_framwork :rspec, :view_specs => false,
+        :controller_specs => false,
+        :helper_specs => false,
+        :routing_specs => false,
+        :request_specs => false,
+     
   end
 end

@@ -40,6 +40,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
@@ -54,5 +55,4 @@ group :test, :development do
     gem 'capybara'
     gem 'cucumber-rails', :require => false
     gem 'database_cleaner'
-    gem 'rspec-rails'
 end
