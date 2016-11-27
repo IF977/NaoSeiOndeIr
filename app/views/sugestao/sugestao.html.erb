@@ -2,7 +2,7 @@
 	<div class "container">
 		<h1>Sugestões</h1>
 		<% @locais.each do |l| %>
-		  <form action="search" method="post"> <input type="image" src= <%=l.imagem%> name= <%=l.nome %> width="790">
+			<%= link_to image_tag(l.imagem), controller: 'descricao', action: 'descricao', :valor => l.nome  %>
 		  <br><br><br><br><br>
 		<% end %>
 	</div>
