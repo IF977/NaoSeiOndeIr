@@ -1,0 +1,2 @@
+class DescricaoController < ApplicationController
+end
