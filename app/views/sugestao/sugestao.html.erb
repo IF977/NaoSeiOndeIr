@@ -1,20 +1,9 @@
 <div class="main">
 	<div class "container">
 		<h1>Sugestões</h1>
-		<table>
-		  <tr>
-		    <th>Local</th>
-		    <th>Nome</th>
-		    <th>Descricao</th>
-		  </tr>
 		<% @locais.each do |l| %>
-		  <tr>
-		    <td> <img src=<%=l.imagem%> width = "220"> </td>
-		    <td><%= l.nome          %></td>
-		    <td><%= l.descricao      %></td>
-		  </tr>
-		  <br><br>
+		  <form action="search" method="post"> <input type="image" src= <%=l.imagem%> name= <%=l.nome %> width="790">
+		  <br><br><br><br><br>
 		<% end %>
-		</table>
 	</div>
 </div>
