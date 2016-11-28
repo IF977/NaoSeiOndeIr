@@ -15,12 +15,10 @@
     				<li><%= link_to "Ajuda", help_path %></li>
             <li><%= link_to "Contato", contact_path %></li>
             <li><%= link_to "Sobre", about_path %></li>
-  					<li><form class="navbar-form navbar-left" role="search">
-  					<div class="form-group">
-    <input type="text" class="form-control input-sm" placeholder="Pesquisar">
-  </div>
-  <button type="submit" class="btn btn-invert btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-</form>				
+  					<li><%= form_tag("descricao", method: "get") do %>
+            <%= text_field_tag(:valor) %>
+            <%= image_submit_tag('http://images.sixrevisions.com/2010/11/17-20_search_png24.png',width: '50', height: '40', id: 'submit', :class => 'btn btn-invert btn-sm') %><br>
+            <% end %>
 					</li>
     			</ul>
     		</div>
