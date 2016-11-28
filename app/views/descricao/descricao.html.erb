@@ -1,12 +1,17 @@
 <div class="main">
 	<div class "container">
-		<h1>Sugestões</h1>
-		<% @desc.each do |l| %>
-			<%= image_tag(l.imagem) %><br>
-      <%= l.nome %><br><br><br>
-      <%= l.descricao %><br><br><br>
-      <%= l.bairro %><br><br><br>
-
+		<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sobre o Local</h1>
+		<br><br><% @desc.each do |l| %>
+			<%= image_tag(l.imagem, width: '1150', height: '500') %><br><br><br>
+			Nome: <%= l.nome %><br><br><br>
+      Descrição: <%= l.descricao %><br><br><br>
+      Bairro: <%= l.bairro %><br><br><br>
+			Logradouro: <%= l.logradouro %><br><br><br>
+			Nota do Local: <%= l.nota %><br><br><br>
+			Preço de Entrada (Reais): <%= l.preco %><br><br><br>
+			Contato: <%= l.telefone %><br><br><br>
+			Site: <%= l.site %><br><br><br>
+			Horário de Funcionamento: <%= l.horario_abre %> às <%= l.horario_fecha %><br><br><br>
 		<% end %>
 	</div>
 </div>

@@ -1,10 +1,10 @@
 <div class="row">
  <div class="col-md-6 col-md-offset-3 grid">
 <h1>Sugestões</h1>
-<p>clique na imagem para mais informações</p>
+<p>(clique nas imagens para mais informações)</p>
 		<% @locais.each do |l| %>
 			<%= link_to image_tag(l.imagem, :class => 'img1'), controller: 'descricao', action: 'descricao', :valor => l.nome %>
-		  <br><br><br><br><br>
+      <br><br><%= l.nome %><br><br>
 		<% end %>
 	</div>
 <br>
