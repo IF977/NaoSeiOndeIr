@@ -1,12 +1,19 @@
 <div class="row">
- <div class="col-md-6 col-md-offset-3 grid">
-<h1>Sugestões</h1>
-<p>(clique nas imagens para mais informações)</p>
+	<div class="col-md-8 col-md-offset-2 grid2">
+		<h1><b>Sugestões</b></h1>
+		<p>(clique nas imagens para mais informações)</p>
+		<br>
+		<br>
 		<% @locais.each do |l| %>
 			<%= link_to image_tag(l.imagem, :class => 'img1'), controller: 'descricao', action: 'descricao', :valor => l.nome %>
-      <br><br><%= l.nome %><br><br>
+      		<br>
+      		<h3><%= l.nome %></h3>
+      		<br>
+      		<br>
+      		<br>
+      		<br>
 		<% end %>
 	</div>
-<br>
-<br>
+	<br>
+	<br>
 </div>
