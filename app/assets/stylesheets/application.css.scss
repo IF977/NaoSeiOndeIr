@@ -92,6 +92,8 @@ div.grid{
 	border-radius: 7px;
 	box-shadow: 2px 2px 10px black;
 	padding-bottom: 4%;
+	padding-top: 3%;
+	padding-left: 3%;
 }
 
 .img1{
@@ -106,4 +108,32 @@ div.grid2{
 	border-radius: 7px;
 	box-shadow: 2px 2px 10px black;
 	padding-bottom: 4%;
+	padding-top: 3%;
+}
+
+div.grid3{
+	padding-left: 10%;
+	background-color: #EEE;
+	border-radius: 7px;
+	box-shadow: 2px 2px 10px black;
+	padding-bottom: 4%;
+	padding-top: 3%;
+}
+.img2{
+	float: left;
+	width: 376px;
+	height: 250px;
+	box-shadow: 1px 1px 5px black;
+	margin-right: 4%;
+	margin-bottom: 5%;
+}
+h1.t{
+	padding-left: 10px;
+	margin-top: 0px;
+}
+
+p.p1{
+	text-align: justify;
+	padding-right: 10%;
+	text-indent: 7%;
 }
